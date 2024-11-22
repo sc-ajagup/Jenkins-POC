@@ -1,7 +1,7 @@
 # tests/test_functions.py
 
 import unittest
-from main import is_even, is_palindrome
+from main import is_even, is_palindrome, reverse
 
 class TestFunctions(unittest.TestCase):
 
@@ -27,6 +27,22 @@ class TestFunctions(unittest.TestCase):
         self.assertFalse(is_palindrome("hello"))
         self.assertFalse(is_palindrome("python"))
         self.assertFalse(is_palindrome("OpenAI"))
+    
+    def test_reverse(self):
+        # Test regular strings
+        self.assertEqual(reverse("hello"), "olleh")
+        self.assertEqual(reverse("world"), "dlrow")
+        self.assertEqual(reverse("OpenAI"), "IAnepO")
+        
+        # Test empty string
+        self.assertEqual(reverse(""), "")
+        
+        # Test single character
+        self.assertEqual(reverse("a"), "a")
+        
+        # Test strings with spaces
+        self.assertEqual(reverse("a b c"), "c b a")
+        self.assertEqual(reverse(" hello "), " olleh ")
 
 if __name__ == "__main__":
     unittest.main()

@@ -27,4 +27,14 @@ def is_palindrome(s: str) -> bool:
     return s == s[::-1]
 
 
-# test comment
+def reverse(s: str) -> str:
+    """
+    function to reverse a string
+
+    Args:
+        s (str): the string to reverse
+
+    Returns:
+        str: reversed string
+    """
+    return s[::-1]

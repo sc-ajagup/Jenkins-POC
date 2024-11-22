@@ -42,7 +42,7 @@ class TestFunctions(unittest.TestCase):
         
         # Test strings with spaces
         self.assertEqual(reverse("a b c"), "c b a")
-        self.assertEqual(reverse(" hello "), "olleh")
+        self.assertEqual(reverse(" hello "), " olleh ")
 
 if __name__ == "__main__":
     unittest.main()
